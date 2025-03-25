@@ -1,0 +1,45 @@
+---
+import { Facebook, Instagram, Linkedin, Youtube,Twitter, Mail} from 'lucide-astro';
+
+const socialLinks = [
+  { platform: 'facebook', url: 'https://www.facebook.com/p/APT-Tecnolog%C3%ADa-y-sistemas-100085089702195/?_rdr', icon: Facebook},
+  { platform: 'twitter', url: 'https://x.com/apttsve', icon: Twitter },
+  { platform: 'instagram', url: 'https://www.instagram.com/apt.venezuela/', icon: Instagram},
+  { platform: 'linkedin', url: 'https://ve.linkedin.com/company/apt-tecnolog%C3%ADa-y-sistemas', icon: Linkedin},
+  { platform: 'youtube',url: 'https://www.youtube.com/@APTTECNOLOGIAYSISTEMAS', icon: Youtube},
+  { platform: 'email', url: 'mailto:soporte@ptts.net.ve', icon: Mail},
+
+
+
+];
+
+
+---
+
+<div class="social-links">
+  <ul class="flex space-x-4">
+    {socialLinks.map(link => (
+
+
+   
+     
+
+
+      <li>
+        <a href={link.url} target="_blank" class="text-body-dark hover:text-white transition-colors">
+          {typeof link.icon === 'string' ? (
+            <i class={link.icon}></i>
+          ) : (
+            <link.icon />
+          )}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .social-links i {
+    font-size: 1.5rem;
+  }
+</style>

@@ -1,0 +1,39 @@
+---
+const whatsappUrl = "https://wa.me/584241596884"; // Reemplaza con tu número de WhatsApp
+import img from '../assets/images/rrss/icons8-whatsapp-48.png';
+---
+
+<a href={whatsappUrl} target="_blank" class="floating-whatsapp-button">
+  <img src={img.src} alt="WhatsApp" />
+</a>
+
+<style>
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+  
+    .floating-whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      animation: bounce 2s infinite;
+    }
+  
+    .floating-whatsapp-button img {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
